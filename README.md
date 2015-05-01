@@ -61,7 +61,7 @@ Here is a sample usage of the "HardenFlash-deploy.py"
 
 When it Works
 =============
-When the patched Flash binary detects a potential Flash exploit or zero-day attack, you will be give a warning dialog like the following:
+When the patched Flash binary detects a potential Flash exploit or zero-day attack, you will be give a warning dialog like the following:<br>
 ![](https://github.com/HaifeiLi/HardenFlash/blob/master/image/HardenFlash.png)
 
 

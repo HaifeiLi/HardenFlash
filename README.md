@@ -59,6 +59,12 @@ Here is a sample usage of the "HardenFlash-deploy.py"
     Flash automatically
 
 
+When it Works
+=============
+When the patched Flash binary detects a potential Flash exploit or zero-day attack, you will be give a warning dialog like the following:
+![](https://github.com/HaifeiLi/HardenFlash/blob/master/image/HardenFlash.png)
+
+
 How to Uninstall
 ================
 You can always uninstall the HardenFlash any time. To uninstall it, you just need to install the Flash Player from Adobe, this will replace the HardenFlash binary automatically. You may go https://get.adobe.com/flashplayer.

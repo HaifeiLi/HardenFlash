@@ -2,11 +2,16 @@
 
 Introduction
 ============
-You probably know how bad it is for Flash security. Five years ago we often heard of Flash-based zero-day attacks, 5 years later we are still facing the same situation (or even worse since we are in the "APT" era now). In Feb 2013, the author revealed the so-called ["Vector Spray" exploitation technique](https://sites.google.com/site/zerodayresearch/smashing_the_heap_with_vector_Li.pdf), which was later used again and again in almost every single Flash or IE zero-day attack. Unfortunately, Adobe - as the vendor - hasn't took any action yet to harden the weakness in their custom heap management, the weakness is so obvious and has been abused for more than 2 years.
+You probably know how bad it is for Flash security. Five years ago we often heard of Flash-based zero-day attacks, 5 years later we are still facing the same situation (or even worse since we are in the "APT" era now). In Feb 2013, the author revealed the a.k.a. ["Vector Spray" exploitation technique](https://sites.google.com/site/zerodayresearch/smashing_the_heap_with_vector_Li.pdf), which was later used again and again in almost every single Flash or IE zero-day attack. Unfortunately, Adobe - as the vendor - hasn't took any action yet to harden the weakness in their custom heap management, the weakness is so obvious and has been abused for more than 2 years.
 
 The HardenFlash was developed from the thought that we must do something to protect Flash users around the world, specially for IE users because IE doesn't have a strong Sandbox. We hook (through PE patching) the Flash binary at certain functions/addresses so we know when the SWF is doing something malicious.
 
 Currently, it's focused only on detecting the previously-mentioned Vector Spray, which is a "must" for all the Flash exploits as I have seen.
+
+
+Why we need tools like HardenFlash?
+==================================
+Some readers may argue that there are already some endpoint exploitation protection tools/products out there, regardless of they are free or commercial. Typical example is the Microsoft's [EMET](https://support.microsoft.com/en-us/kb/2458544). However, such an EMET-like tool is usually protecting at the generic exploitation or shellcode level. The Vector Spray technique enables the attacker to read and write at any bytes in the memory space of the process, with such an "ultimate" ability, the attacker is able to defeat any EMET-like protection easily. In fact, at [this year's PWN2OWN competition](http://h30499.www3.hp.com/t5/HP-Security-Research-Blog/A-look-back-at-Pwn2Own-2015/ba-p/6724115), researchers have already demonstrated this - with successfully bypassing EMET couple times. All these suggest that a hardening or detecting approach from the "Flash level" is critical to protect users from Flash-based attacks.
 
 
 How to Deploy
@@ -61,9 +66,10 @@ Here is a sample usage of the "HardenFlash-deploy.py"
 
 When it Works
 =============
-When the patched Flash binary detects a potential Flash exploit or zero-day attack, you will be give a warning dialog like the following:<br>
+After the installation, you are free to use IE as normal and it's expected to not bring any impact for normal uses. However, when the patched Flash binary detects a potential Flash exploit or zero-day attack, you will be give a warning dialog like the following:<br>
 ![](https://github.com/HaifeiLi/HardenFlash/blob/master/image/HardenFlash.png)
 
+Then, after the user confirms the message, the process will be terminated and the malicious exploit will be stopped.
 
 How to Uninstall
 ================
@@ -167,7 +173,7 @@ License
 =======
 HardenFlash is released under the GNU General Public License V2 (https://github.com/HaifeiLi/HardenFlash/blob/master/LICENSE.md), WITHOUT ANY WARRANTY - USE IT AT YOUR OWN RISK. All rights reserved.
 
-This project is released as free, open-source and you are free to integrate it into your tool/product as long as your tool/product is free or open-source for good purpose. For commercial use, you need to contact the author first.
+This project is released as free, open-source and you are free to integrate it into your tool/product as long as your tool/product is free or open-source for good purpose (with acknowledging the project and the author). For commercial use, you need to contact the author first.
 
 
 

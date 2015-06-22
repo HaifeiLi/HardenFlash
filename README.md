@@ -167,7 +167,7 @@ As of June 22, 2015, HardenFlash receieves a %100 success detection rate since i
 3. CVE-2015-3105
 4. CVE-2015-3104
 
-sample credit: @kafeine (http://malware.dontneedcoffee.com).
+sample credit: [@kafeine](http://malware.dontneedcoffee.com).					
 
 
 Known Issues

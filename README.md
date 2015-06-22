@@ -158,9 +158,11 @@ What've been Modified
 .hard:1112367E push 0FFFFFFFFh<br>
 .hard:11123680 call dword ptr [edx+24h] ; ExitProcess<br>
 
+
+
 Effectiveness
 =============
-As of June 22, 2015, HardenFlash receieves a %100 success detection rate since its release on April 30, 2015 - a strong proof of its effectiveness. Specifically, it stops the following Flash exploits which are seen in the wild.
+As of June 22, 2015, HardenFlash receieves a %100 success detection rate since its release on April 30, 2015 - a strong proof of its effectiveness. Specifically, it stops the following Flash exploits seen in the wild.
 
 1. CVE-2015-0336
 2. CVE-2015-3090
@@ -168,6 +170,7 @@ As of June 22, 2015, HardenFlash receieves a %100 success detection rate since i
 4. CVE-2015-3104
 
 sample credit: [@kafeine](http://malware.dontneedcoffee.com).					
+
 
 
 Known Issues

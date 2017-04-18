@@ -1,4 +1,4 @@
-#HardenFlash - Patching Flash binary to stop Flash exploits and zero-days
+# HardenFlash - Patching Flash binary to stop Flash exploits and zero-days
 
 Introduction
 ============
